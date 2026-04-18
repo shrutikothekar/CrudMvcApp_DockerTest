@@ -1,0 +1,118 @@
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}*/
+
+/* ===== GLOBAL ===== */
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: linear-gradient(90deg, #4e73df, #224abe);
+}
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+        color: #fff !important;
+        font-weight: 500;
+    }
+
+        .navbar .nav-link:hover {
+            color: #d1d3e2 !important;
+        }
+
+/* ===== CARD STYLE ===== */
+.card-custom {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-top: 20px;
+}
+
+/* ===== HEADINGS ===== */
+h1, h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background: #4e73df;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+    .btn-primary:hover {
+        background: #2e59d9;
+    }
+
+.btn-danger {
+    border-radius: 6px;
+}
+
+/* ===== FORM ===== */
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #d1d3e2;
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* ===== TABLE ===== */
+.table {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .table thead {
+        background: #4e73df;
+        color: white;
+    }
+
+    .table tbody tr:hover {
+        background: #f1f3f9;
+    }
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+}

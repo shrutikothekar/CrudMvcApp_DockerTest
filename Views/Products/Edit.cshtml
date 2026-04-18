@@ -1,0 +1,43 @@
+﻿@model CrudMvcApp_DockerTest.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<div class="card-custom col-md-6 mx-auto">
+
+    <h2 class="mb-3">✏️ Edit Product</h2>
+    <p class="text-muted">Update product details below</p>
+    <hr />
+
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="Name" class="control-label fw-semibold"></label>
+            <input asp-for="Name" class="form-control" placeholder="Enter product name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="control-label fw-semibold"></label>
+            <input asp-for="Price" class="form-control" placeholder="Enter price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a asp-action="Index" class="btn btn-secondary">⬅ Back</a>
+
+            <input type="submit" value="💾 Save Changes" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

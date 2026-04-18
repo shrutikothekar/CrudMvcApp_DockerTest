@@ -1,0 +1,12 @@
+Installation -
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Npgsql.EntityFrameworkCore.PostgreSQL
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+To Migrate Commands-
+
+dotnet tool install --global dotnet-ef
+dotnet ef migrations add InitialCreate
+dotnet ef database update
