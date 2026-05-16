@@ -10,3 +10,19 @@ To Migrate Commands-
 dotnet tool install --global dotnet-ef
 dotnet ef migrations add InitialCreate
 dotnet ef database update
+
+Docket I,age -
+1. Add > Docker Supposert ? Create.
+2.Update Connection String
+3.Create docker-compose.yml
+4. Open terminal runcommand to compose and run anywhere-
+   >> docker-compose up --build
+5.docker build -t tutimage
+
+
+For docker Upload - 
+Create Docker File
+Create docker-compose.yml file (with db  configration)
+In Program.cs file - Add automigrate command to db 
+open terminal - docker compose down
+              - docker compose up --build

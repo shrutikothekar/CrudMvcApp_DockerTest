@@ -2,6 +2,7 @@
 using AspNetCoreHero.ToastNotification.Extensions;
 using CrudMvcApp_DockerTest.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// ✅ AUTO APPLY MIGRATIONS -  For Docker
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    db.Database.Migrate();
+}
+
 
 // Configure the HTTP request pipeline.-
 if (!app.Environment.IsDevelopment())

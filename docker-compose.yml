@@ -1,0 +1,21 @@
+﻿version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5001:8080"   # ✅ FIXED
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: cruddb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: system
+    ports:
+      - "5432:5432"
